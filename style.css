@@ -233,6 +233,11 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
   border: 1px solid var(--line);
   aspect-ratio: 4 / 3;
 }
+.project-gallery img.contain {
+  object-fit: contain;
+  background: var(--bg-alt);
+  padding: 8px;
+}
 .project-gallery img:only-child,
 .project-gallery img:first-child:nth-last-child(3) {
   grid-column: 1 / -1;
