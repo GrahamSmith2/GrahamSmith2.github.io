@@ -12,9 +12,9 @@
 <header class="nav">
   <a href="#top" class="nav-name">Graham Smith</a>
   <nav>
-    <a href="#experience">Experience</a>
+    <a href="#internships">Internships</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a href="#classes">Classes</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -22,87 +22,56 @@
 <main>
 
 <section id="top" class="hero">
-  <p class="eyebrow">Mechanical &amp; Aerospace Engineering &middot; Princeton University</p>
+  <img class="avatar" src="assets/img/headshot.jpg" alt="Graham Smith" onerror="this.classList.add('avatar-fallback')">
   <h1>Graham Smith</h1>
-  <p class="hero-sub">
-    I build and test the hardware that has to actually work: VTOL control laws, electric marine
-    powertrains, CFD-optimized outboard geometry, and — for fun — a chess engine written from
-    scratch in C++.
-  </p>
+  <p class="eyebrow">B.S.E. Mechanical &amp; Aerospace Engineering &middot; Princeton University</p>
+
+  <ul class="skill-tags">
+    <li>SolidWorks</li><li>Fusion 360</li><li>Creo</li><li>CNC Mill</li><li>Manual Lathe &amp; Mill</li>
+    <li>3D Printing</li><li>SimScale</li><li>XFoil</li><li>MATLAB</li><li>Mathematica</li>
+    <li>C++</li><li>Java</li><li>Python</li>
+  </ul>
+
   <div class="hero-links">
-    <a class="btn btn-primary" href="mailto:graham@smithsnet.us">Email me</a>
     <a class="btn" href="https://www.linkedin.com/in/graham-smith-b054ab282/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn" href="#projects">See projects &darr;</a>
+    <a class="btn btn-primary" href="mailto:graham@smithsnet.us">Email me</a>
   </div>
 </section>
 
-<section id="experience" class="section">
-  <h2>Experience</h2>
+<section id="internships" class="section">
+  <h2>Internships</h2>
   <div class="timeline">
 
-    <article class="entry">
-      <div class="entry-head">
-        <h3>Aerospace Engineering Intern</h3>
-        <span class="entry-date">May 2026 – Present</span>
+    <article class="entry entry-with-logo">
+      <img class="entry-logo entry-logo-dark" src="assets/img/jetoptera-logo.png" alt="Jetoptera logo">
+      <div class="entry-body">
+        <div class="entry-head">
+          <h3>Aerospace Engineering Intern</h3>
+          <span class="entry-date">May 2026 – Present</span>
+        </div>
+        <p class="entry-org">Jetoptera &middot; Edmonds, WA</p>
+        <ul>
+          <li>Implemented and tuned control laws on a novel hover control system to optimize and prove vertical-flight stability.</li>
+          <li>Authored and executed comprehensive test cards and safety checklists governing risk-mitigated, progressive flight testing of a novel VTOL prototype.</li>
+          <li>Engineered and executed experimental test plans for a proprietary ejector-based propulsion system, mapping how supply pressure, intake geometry, and ground effect drive thrust generation.</li>
+        </ul>
       </div>
-      <p class="entry-org">Jetoptera &middot; Edmonds, WA</p>
-      <ul>
-        <li>Implemented and tuned control laws on a novel hover control system to optimize and prove vertical-flight stability.</li>
-        <li>Authored and executed comprehensive test cards and safety checklists governing risk-mitigated, progressive flight testing of a novel VTOL prototype.</li>
-        <li>Engineered and executed experimental test plans for a proprietary ejector-based propulsion system, mapping how supply pressure, intake geometry, and ground effect drive thrust generation.</li>
-      </ul>
     </article>
 
-    <article class="entry">
-      <div class="entry-head">
-        <h3>Engineering Team Lead</h3>
-        <span class="entry-date">Aug 2025 – Present</span>
+    <article class="entry entry-with-logo">
+      <img class="entry-logo" src="assets/img/ilmor-logo.png" alt="Ilmor logo">
+      <div class="entry-body">
+        <div class="entry-head">
+          <h3>Mechanical Engineering Intern</h3>
+          <span class="entry-date">Jun 2025 – Aug 2025</span>
+        </div>
+        <p class="entry-org">Ilmor Marine &middot; Plymouth, MI</p>
+        <ul>
+          <li>Optimized the outer geometry of a future outboard's lower unit using SimScale CFD, cutting drag by 12%.</li>
+          <li>Tested foil profiles for lower-unit components, delivering quantitative fluid-dynamics results for early-stage prototyping.</li>
+          <li>Designed and machined a test platform to measure thermal and electrical efficiency of high-current MOSFETs under operational load.</li>
+        </ul>
       </div>
-      <p class="entry-org">Princeton Electric Speedboating Team &middot; Princeton, NJ</p>
-      <ul>
-        <li>Directing a 30-person team designing and building 2 boats across 3 categories for the Promoting Electric Propulsion (PEP) Competition — 1st place Planing Design (46 MPH top speed), 3rd Over the Horizon, 4th Displacement.</li>
-        <li>Manufacturing and designing the 48V powertrain, in-house outboard, 1000A custom battery pack, and electrical system for both vessels.</li>
-        <li>Leading powertrain development and testing toward a 48V hydroplane speed record attempt (60 mph target).</li>
-        <li>Updating the displacement boat with in-house manufactured composite foils, reaching 30 mph.</li>
-      </ul>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h3>Mechanical Engineering Intern</h3>
-        <span class="entry-date">Jun 2025 – Aug 2025</span>
-      </div>
-      <p class="entry-org">Ilmor Marine &middot; Plymouth, MI</p>
-      <ul>
-        <li>Optimized the outer geometry of a future outboard's lower unit using SimScale CFD, cutting drag by 12%.</li>
-        <li>Tested foil profiles for lower-unit components, delivering quantitative fluid-dynamics results for early-stage prototyping.</li>
-        <li>Designed and machined a test platform to measure thermal and electrical efficiency of high-current MOSFETs under operational load.</li>
-      </ul>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h3>Subteam Leader</h3>
-        <span class="entry-date">Aug 2024 – Jun 2025</span>
-      </div>
-      <p class="entry-org">Princeton Electric Speedboating Team &middot; Princeton, NJ</p>
-      <ul>
-        <li>Led a 5-person design team to 3rd place in the 2025 PEP displacement division.</li>
-        <li>Managed conversion of a racing sailing catamaran to run the club's electric powertrain, including a CNC-manufactured engine mount and full steering/throttle rigging.</li>
-        <li>Increased top speed from 12 to 17 mph through propeller optimization and a small added planing surface.</li>
-      </ul>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h3>Independent Student Researcher</h3>
-        <span class="entry-date">Jan 2022 – Mar 2023</span>
-      </div>
-      <p class="entry-org">Mentored by a senior Gulfstream engineer</p>
-      <ul>
-        <li>Built a computationally simple sizing model to predict future drone performance (~400 hours of work), implemented in Mathematica with battery performance predictions.</li>
-        <li>Compiled a database of flight specifications for 50 drones in Excel to ground the model.</li>
-      </ul>
     </article>
 
   </div>
@@ -110,6 +79,76 @@
 
 <section id="projects" class="section">
   <h2>Projects</h2>
+
+  <p class="project-group-label">Boat Projects &middot; Princeton Electric Speedboating Team</p>
+  <p class="project-group-intro">
+    As Engineering Team Lead (Aug 2025–present, 30-person team) and previously Subteam Leader
+    (Aug 2024–Jun 2025, 5-person team), I've directed design and construction of the club's boats
+    for the Promoting Electric Propulsion (PEP) Competition — 1st place Planing Design (46 MPH top
+    speed), 3rd Over the Horizon, 4th Displacement, and 3rd in the 2025 displacement division.
+    Currently building a 48V hydroplane toward a 60 mph speed record attempt.
+  </p>
+
+  <article class="project">
+    <div class="project-text">
+      <h3>Electric Displacement Catamaran</h3>
+      <p class="project-tag">PEP Competition &middot; Princeton Electric Speedboating</p>
+      <p>
+        Led the conversion of an existing racing sailing catamaran to electric propulsion: hull
+        selection, decking and flooring, steering system, and full mechanical integration of the
+        48V powertrain, in-house outboard, 1000A custom battery pack, and electrical system.
+      </p>
+      <p>
+        Mounted the outboard through the catamaran's existing crossbeam, transferring thrust and
+        torque loads at the system level via a fiberglass-reinforced plywood mount and a
+        CNC-machined metal bracket welded to the crossbeam. Propeller optimization and a small
+        added planing surface took top speed from 12 to 17 mph.
+      </p>
+    </div>
+    <div class="project-media project-gallery">
+      <img src="assets/img/catamaran-build.jpg" alt="Catamaran deck under construction at the PEP competition, showing the plywood helm structure and steering wheel">
+      <img src="assets/img/engine-mount-1.jpg" alt="Fiberglass-reinforced plywood outboard engine mount bolted to the crossbeam">
+      <img src="assets/img/engine-mount-cad.png" alt="CAD outline of the CNC-machined metal bracket welded to the crossbeam">
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-text">
+      <h3>Hydrofoil Design &amp; Analysis</h3>
+      <p class="project-tag">CFD &middot; XFoil &middot; SimScale</p>
+      <p>
+        Added a front hydrofoil and rear planing surface to the displacement catamaran to cut
+        effective hull drag. Used XFoil to sweep 2D foil geometry (NACA 3410) for angle of attack
+        against drag and stability margins, then ran full CFD on the planing surface across a
+        range of velocities in SimScale. In-house manufactured composite foils brought the boat to
+        30 mph.
+      </p>
+    </div>
+    <div class="project-media project-gallery">
+      <img src="assets/img/xfoil-naca3410.png" alt="XFoil pressure-coefficient sweep for a NACA 3410 foil section">
+      <img src="assets/img/simscale-foil.png" alt="SimScale streamline simulation of the NACA 3410 foil at 3.5 degree angle of attack">
+      <img src="assets/img/simscale-planing.png" alt="SimScale fluid dynamics simulation of the rear planing surface">
+    </div>
+  </article>
+
+  <p class="project-group-label project-group-label-spaced">Side Projects</p>
+
+  <article class="project">
+    <div class="project-text">
+      <h3>Winter Break Drone Project</h3>
+      <p class="project-tag">3D Printing &middot; Fixed-Wing RC</p>
+      <p>
+        Designed, 3D-printed, and assembled a small electric fixed-wing flying wing from scratch —
+        sourcing components to spec, managing CG placement through iterative flight testing, and
+        setting up elevons and trim for stable flight. Hands-on work with lightweight PLA, PETG,
+        and PLA+ for airframe parts.
+      </p>
+    </div>
+    <div class="project-media project-gallery">
+      <img src="assets/img/drone-2.jpg" alt="3D-printed flying-wing drone opened up showing battery, receiver, ESC, and motor wiring">
+      <img src="assets/img/drone-1.jpg" alt="Assembled flying-wing drone with the top cover on">
+    </div>
+  </article>
 
   <article class="project project-chess">
     <div class="project-text">
@@ -137,96 +176,30 @@
     </div>
   </article>
 
-  <article class="project">
-    <div class="project-text">
-      <h3>Electric Displacement Catamaran</h3>
-      <p class="project-tag">PEP Competition &middot; Princeton Electric Speedboating</p>
-      <p>
-        Led the conversion of an existing racing sailing catamaran to electric propulsion within
-        PEP Competition rules: hull selection, decking and flooring, steering system, and full
-        mechanical integration of the electric powertrain.
-      </p>
-      <p>
-        Mounted the outboard through the catamaran's existing crossbeam, transferring thrust and
-        torque loads at the system level via a fiberglass-reinforced plywood mount and a
-        CNC-machined metal bracket welded to the crossbeam.
-      </p>
-    </div>
-    <div class="project-media project-gallery">
-      <img src="assets/img/catamaran-build.jpg" alt="Catamaran deck under construction at the PEP competition, showing the plywood helm structure and steering wheel">
-      <img src="assets/img/engine-mount-1.jpg" alt="Fiberglass-reinforced plywood outboard engine mount bolted to the crossbeam">
-      <img src="assets/img/engine-mount-cad.png" alt="CAD outline of the CNC-machined metal bracket welded to the crossbeam">
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="project-text">
-      <h3>Hydrofoil Design &amp; Analysis</h3>
-      <p class="project-tag">CFD &middot; XFoil &middot; SimScale</p>
-      <p>
-        Added a front hydrofoil and rear planing surface to the displacement catamaran to cut
-        effective hull drag. Used XFoil to sweep 2D foil geometry (NACA 3410) for angle of attack
-        against drag and stability margins, then ran full CFD on the planing surface across a
-        range of velocities in SimScale.
-      </p>
-    </div>
-    <div class="project-media project-gallery">
-      <img src="assets/img/xfoil-naca3410.png" alt="XFoil pressure-coefficient sweep for a NACA 3410 foil section">
-      <img src="assets/img/simscale-foil.png" alt="SimScale streamline simulation of the NACA 3410 foil at 3.5 degree angle of attack">
-      <img src="assets/img/simscale-planing.png" alt="SimScale fluid dynamics simulation of the rear planing surface">
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="project-text">
-      <h3>Winter Break Drone Project</h3>
-      <p class="project-tag">3D Printing &middot; Fixed-Wing RC</p>
-      <p>
-        Designed, 3D-printed, and assembled a small electric fixed-wing flying wing from scratch —
-        sourcing components to spec, managing CG placement through iterative flight testing, and
-        setting up elevons and trim for stable flight. Hands-on work with lightweight PLA, PETG,
-        and PLA+ for airframe parts.
-      </p>
-    </div>
-    <div class="project-media project-gallery">
-      <img src="assets/img/drone-2.jpg" alt="3D-printed flying-wing drone opened up showing battery, receiver, ESC, and motor wiring">
-      <img src="assets/img/drone-1.jpg" alt="Assembled flying-wing drone with the top cover on">
-    </div>
-  </article>
-
 </section>
 
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <h3>CAD &amp; Manufacturing</h3>
-      <p>SolidWorks, Fusion 360, Creo, 3D Printing, CNC Mill, Manual Lathe &amp; Mill</p>
-    </div>
-    <div class="skill-group">
-      <h3>Simulation &amp; Analysis</h3>
-      <p>SimScale, XFoil, MATLAB, Mathematica</p>
-    </div>
-    <div class="skill-group">
-      <h3>Software</h3>
-      <p>C++, Java, Python, Excel, LaTeX</p>
-    </div>
-  </div>
+<section id="classes" class="section">
+  <h2>Classes</h2>
+  <p class="entry-org">Princeton University &middot; B.S.E. Mechanical &amp; Aerospace Engineering &middot; Expected May 2028</p>
+  <ul class="skill-tags">
+    <li>Aircraft Flight Dynamics</li><li>Mechanical Design</li><li>Structure and Properties of Materials</li>
+    <li>Fluid Mechanics</li><li>Engineering Dynamics</li><li>Thermodynamics</li><li>Solid Mechanics</li>
+    <li>Differential Equations</li><li>Intro to Computer Science</li>
+  </ul>
 </section>
 
-<section id="education" class="section">
-  <h2>Education</h2>
+<section id="research" class="section">
+  <h2>Independent Research</h2>
   <article class="entry">
     <div class="entry-head">
-      <h3>Princeton University</h3>
-      <span class="entry-date">Expected May 2028</span>
+      <h3>Independent Student Researcher</h3>
+      <span class="entry-date">Jan 2022 – Mar 2023</span>
     </div>
-    <p class="entry-org">B.S.E. in Mechanical and Aerospace Engineering</p>
-    <p>
-      Relevant coursework: Aircraft Flight Dynamics, Mechanical Design, Structure and Properties
-      of Materials, Fluid Mechanics, Engineering Dynamics, Thermodynamics, Solid Mechanics,
-      Differential Equations, Intro to Computer Science.
-    </p>
+    <p class="entry-org">Mentored by a senior Gulfstream engineer</p>
+    <ul>
+      <li>Built a computationally simple sizing model to predict future drone performance (~400 hours of work), implemented in Mathematica with battery performance predictions.</li>
+      <li>Compiled a database of flight specifications for 50 drones in Excel to ground the model.</li>
+    </ul>
   </article>
 </section>
 
