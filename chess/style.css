@@ -8,6 +8,13 @@
   --check: rgba(220, 30, 30, 0.55);
   --board-size: 560px;
   --square: calc(var(--board-size) / 8);
+
+  --bg: #ffffff;
+  --bg-alt: #f4f4f2;
+  --ink: #111111;
+  --ink-soft: #5c5c5c;
+  --line: #e2e2e2;
+  --accent: #ff5a1f;
 }
 
 * { box-sizing: border-box; }
@@ -15,9 +22,9 @@
 body {
   margin: 0;
   padding: 24px;
-  background: #2b2019;
-  color: #eee;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Cascadia Code", "Consolas", "SFMono-Regular", "Liberation Mono", monospace;
   display: flex;
   justify-content: center;
 }
@@ -26,35 +33,35 @@ body {
 
 .back-link {
   display: inline-block;
-  color: #cbb89a;
+  color: var(--ink-soft);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 8px;
 }
-.back-link:hover { color: #f0d9b5; }
+.back-link:hover { color: var(--accent); }
 
 h1 {
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-  color: #f0d9b5;
+  color: var(--ink);
 }
 
 .subtitle {
   text-align: center;
-  color: #cbb89a;
-  font-size: 14px;
+  color: var(--ink-soft);
+  font-size: 13.5px;
   max-width: 560px;
   margin: 0 auto 24px;
   line-height: 1.5;
 }
 
 .panel {
-  background: #3a2d22;
-  border-radius: 10px;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
   padding: 16px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 #setup, .login {
@@ -66,14 +73,14 @@ h1 {
 #setup button {
   margin: 8px;
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .login input {
   padding: 8px 10px;
-  font-size: 15px;
-  border-radius: 6px;
-  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
   width: 140px;
   margin-right: 8px;
   text-align: center;
@@ -85,22 +92,23 @@ h1 {
 }
 
 .login-error {
-  color: #e86868;
+  color: #d92929;
   font-size: 13px;
   margin-top: 10px;
 }
 
 button {
-  background: #b58863;
-  color: #241a12;
+  background: var(--accent);
+  color: #ffffff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  font-family: inherit;
   cursor: pointer;
 }
-button:hover { background: #c99a72; }
+button:hover { background: #e04d15; }
 button:disabled { opacity: 0.5; cursor: default; }
 
 .hidden { display: none !important; }
@@ -128,10 +136,10 @@ button:disabled { opacity: 0.5; cursor: default; }
   grid-template-rows: repeat(8, 1fr);
   width: var(--board-size);
   height: var(--board-size);
-  border: 3px solid #241a12;
+  border: 3px solid var(--ink);
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .square {
@@ -192,7 +200,7 @@ button:disabled { opacity: 0.5; cursor: default; }
 
 .files, .ranks {
   position: absolute;
-  color: #d8c6a8;
+  color: var(--ink-soft);
   font-size: 12px;
   font-weight: 600;
   pointer-events: none;
@@ -230,18 +238,18 @@ button:disabled { opacity: 0.5; cursor: default; }
 }
 
 .status {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
   min-height: 24px;
 }
-.status.thinking { color: #e8c468; }
-.status.check { color: #e86868; }
-.status.over { color: #7fd77f; }
+.status.thinking { color: var(--accent); }
+.status.check { color: #d92929; }
+.status.over { color: #1a8a3d; }
 
 .material-diff {
-  font-size: 14px;
-  color: #cbb89a;
+  font-size: 13.5px;
+  color: var(--ink-soft);
   margin-bottom: 16px;
 }
 
@@ -251,25 +259,26 @@ button:disabled { opacity: 0.5; cursor: default; }
   margin: 0 0 16px 0;
   max-height: 320px;
   overflow-y: auto;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.7;
 }
 .move-list li { display: flex; gap: 8px; }
-.move-list .num { color: #a3927a; width: 26px; }
+.move-list .num { color: var(--ink-soft); width: 26px; }
 .move-list .mv { min-width: 56px; }
 
 .promo-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
 }
 .promo-box {
-  background: #3a2d22;
-  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
   padding: 16px;
   display: flex;
   gap: 10px;
@@ -278,8 +287,8 @@ button:disabled { opacity: 0.5; cursor: default; }
   width: 56px;
   height: 56px;
   background: var(--light);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 6px;
   cursor: pointer;
 }
-.promo-box img:hover { outline: 3px solid var(--highlight); }
+.promo-box img:hover { outline: 3px solid var(--accent); }
