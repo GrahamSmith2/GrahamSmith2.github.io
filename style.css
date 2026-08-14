@@ -312,3 +312,52 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
   }
   .nav { background: rgba(22, 21, 17, 0.9); }
 }
+
+/* ---- Theme previews: append ?theme=blueprint or ?theme=mono to the URL ---- */
+
+:root[data-theme="blueprint"] {
+  --bg: #0a1420;
+  --bg-alt: #101f30;
+  --ink: #e7eef5;
+  --ink-soft: #8fa5bd;
+  --line: #22364a;
+  --accent: #4fb3f0;
+  --accent-ink: #051019;
+  --card: #101f30;
+}
+:root[data-theme="blueprint"] .nav { background: rgba(10, 20, 32, 0.92); }
+:root[data-theme="blueprint"] .eyebrow,
+:root[data-theme="blueprint"] .entry-date,
+:root[data-theme="blueprint"] .project-tag,
+:root[data-theme="blueprint"] .skill-tags li,
+:root[data-theme="blueprint"] .entry-org {
+  font-family: "Cascadia Code", "Consolas", "SFMono-Regular", monospace;
+}
+
+:root[data-theme="mono"] {
+  --bg: #ffffff;
+  --bg-alt: #f4f4f2;
+  --ink: #111111;
+  --ink-soft: #5c5c5c;
+  --line: #e2e2e2;
+  --accent: #ff5a1f;
+  --accent-ink: #ffffff;
+  --card: #ffffff;
+}
+:root[data-theme="mono"] body,
+:root[data-theme="mono"] h1,
+:root[data-theme="mono"] h2,
+:root[data-theme="mono"] h3,
+:root[data-theme="mono"] .nav-name,
+:root[data-theme="mono"] .btn,
+:root[data-theme="mono"] .eyebrow,
+:root[data-theme="mono"] .project-tag,
+:root[data-theme="mono"] .entry-date,
+:root[data-theme="mono"] .entry-org,
+:root[data-theme="mono"] .skill-tags li,
+:root[data-theme="mono"] p,
+:root[data-theme="mono"] li {
+  font-family: "Cascadia Code", "Consolas", "SFMono-Regular", "Liberation Mono", monospace;
+}
+:root[data-theme="mono"] .btn { border-radius: 4px; }
+:root[data-theme="mono"] .skill-tags li { border-radius: 4px; }

@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graham Smith — Mechanical &amp; Aerospace Engineering</title>
 <meta name="description" content="Portfolio of Graham Smith, mechanical & aerospace engineering student at Princeton University: VTOL flight testing, electric powertrains, CFD, and a from-scratch chess engine.">
-<link rel="stylesheet" href="style.css?v=2">
+<script>
+  var t = new URLSearchParams(location.search).get('theme');
+  if (t) document.documentElement.setAttribute('data-theme', t);
+</script>
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -152,7 +156,7 @@
 
   <article class="project project-chess">
     <div class="project-text">
-      <h3>HomebrewChess</h3>
+      <h3>Graham's Engine</h3>
       <p class="project-tag">C++ &middot; WebAssembly &middot; Chess Engine</p>
       <p>
         A UCI-compatible chess engine written from scratch in C++: bitboard-adjacent move
