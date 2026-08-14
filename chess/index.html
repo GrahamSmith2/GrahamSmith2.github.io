@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HomebrewChess</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="../index.html#projects">&larr; Back to portfolio</a>
+    <h1>HomebrewChess</h1>
+    <p class="subtitle">A UCI chess engine, written from scratch in C++ and compiled to WebAssembly — runs entirely in your browser, no server involved.</p>
+
+    <div id="setup" class="panel">
+      <p id="loadStatus">Loading engine…</p>
+      <div id="colorButtons" class="hidden">
+        <p>Play as:</p>
+        <button id="playWhiteBtn">White</button>
+        <button id="playBlackBtn">Black</button>
+      </div>
+    </div>
+
+    <div id="game" class="game hidden">
+      <div class="side">
+        <div class="tray" id="trayTop"></div>
+        <div class="board-wrap">
+          <div id="board" class="board"></div>
+          <div id="files" class="files"></div>
+          <div id="ranks" class="ranks"></div>
+        </div>
+        <div class="tray" id="trayBottom"></div>
+      </div>
+
+      <div class="panel info">
+        <div id="status" class="status">Loading…</div>
+        <div id="materialDiff" class="material-diff"></div>
+        <h3>Moves</h3>
+        <ol id="moveList" class="move-list"></ol>
+        <button id="newGameBtn">New Game</button>
+      </div>
+    </div>
+
+    <div id="promoOverlay" class="promo-overlay hidden">
+      <div class="promo-box" id="promoBox"></div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+:root {
+  --bg: #fafaf8;
+  --bg-alt: #f2f1ec;
+  --ink: #1c1c1a;
+  --ink-soft: #55534c;
+  --line: #ddd9cf;
+  --accent: #b5502e;
+  --accent-ink: #fff;
+  --card: #ffffff;
+  --radius: 10px;
+  --max: 900px;
+  font-size: 17px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Georgia", "Iowan Old Style", serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .nav-name, .btn, .eyebrow, .project-tag, .entry-date {
+  font-family: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+a { color: var(--accent); }
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-name {
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.nav nav { display: flex; gap: 20px; }
+.nav nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav nav a:hover { color: var(--accent); }
+
+main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+.hero {
+  padding: 72px 0 56px;
+  max-width: 640px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+}
+
+.hero-links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.btn:hover { transform: translateY(-1px); background: var(--bg-alt); }
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover { background: #9c4426; color: var(--accent-ink); }
+
+.section { padding: 48px 0; border-top: 1px solid var(--line); scroll-margin-top: 64px; }
+.section h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin: 0 0 32px;
+}
+
+.timeline { display: flex; flex-direction: column; gap: 36px; }
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+.entry-head h3 { margin: 0; font-size: 19px; }
+.entry-date {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.entry-org {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14.5px;
+  font-family: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+.entry ul { margin: 0; padding-left: 20px; }
+.entry li { margin-bottom: 6px; color: var(--ink-soft); }
+.entry p { margin: 0; color: var(--ink-soft); }
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+}
+.project + .project { border-top: 1px dashed var(--line); }
+
+.project-text h3 { margin: 0 0 4px; font-size: 22px; }
+.project-tag {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+.project-text p { color: var(--ink-soft); margin: 0 0 12px; }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.project-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3;
+}
+.project-gallery img:only-child,
+.project-gallery img:first-child:nth-last-child(3) {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+.project-chess {
+  background: #241a12;
+  color: #f0d9b5;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 8px 0;
+}
+.project-chess h3 { color: #f0d9b5; }
+.project-chess .project-tag { color: #cbb89a; }
+.project-chess p { color: #d8c6a8; }
+.project-chess .btn-primary { background: #b58863; border-color: #b58863; color: #241a12; }
+.project-chess .btn-primary:hover { background: #c99a72; }
+
+.project-media-chess { display: flex; justify-content: center; }
+.mini-board {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid #4a3826;
+  transform: rotate(-4deg);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+.mini-square { background: #f0d9b5; }
+.mini-square.dark { background: #b58863; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.skill-group h3 {
+  font-size: 14px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.skill-group p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+.contact-section { text-align: center; padding-bottom: 72px; }
+.contact-section h2 { text-align: center; }
+.contact-section .hero-links { justify-content: center; }
+
+.site-footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-family: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (max-width: 720px) {
+  :root { font-size: 16px; }
+  .nav nav { gap: 12px; }
+  .nav nav a { font-size: 13px; }
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: 34px; }
+  .project { grid-template-columns: 1fr; }
+  .project-media-chess { order: -1; }
+  .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161511;
+    --bg-alt: #1f1e19;
+    --ink: #ece9e0;
+    --ink-soft: #a9a498;
+    --line: #322f27;
+    --card: #1f1e19;
+    --accent: #e08a5f;
+    --accent-ink: #161511;
+  }
+  .nav { background: rgba(22, 21, 17, 0.9); }
+}
