@@ -240,7 +240,10 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 }
 .project-gallery img.hero {
   grid-column: 1 / -1;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 815 / 843;
+}
+.project-gallery img.tall {
+  aspect-ratio: 1400 / 1866;
 }
 .project-gallery img:only-child,
 .project-gallery img:first-child:nth-last-child(3):not(.hero) {
