@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graham Smith — Mechanical &amp; Aerospace Engineering</title>
 <meta name="description" content="Portfolio of Graham Smith, mechanical & aerospace engineering student at Princeton University: VTOL flight testing, electric powertrains, CFD, and a from-scratch chess engine.">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -80,7 +80,60 @@
 <section id="projects" class="section">
   <h2>Projects</h2>
 
-  <p class="project-group-label">Boat Projects &middot; Princeton Electric Speedboating Team</p>
+  <p class="project-group-label">Research Project</p>
+  <article class="project project-full skyweaver">
+    <div class="project-text">
+      <h3>Skyweaver &mdash; Tethered Twin-Aircraft Heavy Lift</h3>
+      <p class="project-tag">MATLAB &middot; 6-DOF Simulation &middot; Guidance &amp; Control</p>
+      <p>
+        Skyweaver is a heavy-lift concept in which two tethered fixed-wing aircraft fly a
+        coordinated orbit around a shared payload, acting together as a single very large,
+        lightly-loaded rotor. It targets the payload-to-weight problem DARPA set in its 2026
+        Lift Challenge &mdash; a 4:1 goal no entrant met, the winner reaching 3.84:1 with a
+        conventional helicopter. The airframe is modelled on NASA's FASER (Free-flying
+        Aircraft for Subscale Experimental Research), a Hangar 9 Ultra Stick 120 research
+        testbed, using its real wind-tunnel-measured geometry, mass and inertia data: 1.92 m
+        span, 0.77 m&sup2; wing area, aspect ratio 4.42, 7.48 kg. I built a nonlinear
+        six-degree-of-freedom simulation of the complete system in MATLAB &mdash; two airframes and
+        a payload coupled by tension-only ropes with slack/taut switching, whole-wing
+        aerodynamics with rate damping, tether drag, ground contact, and a control-surface
+        model that checks every commanded moment against what real ailerons and rudders can
+        actually deliver. On that plant I designed and compared three controllers &mdash; a takeoff
+        scheduler, a cascaded PID autopilot, and a rotating-frame LQR &mdash; plus an outer guidance
+        loop that makes forward speed commandable and holds the vehicle on a line to under
+        half a metre. The result is a maximum-speed-versus-payload envelope showing a 25&ndash;30 kg
+        payload ceiling set by rudder authority rather than by lift or power, with the LQR
+        extending that envelope by up to 19% and flying the takeoff inside the aerodynamic
+        envelope where the PID does not.
+      </p>
+      <p class="skyweaver-note">
+        Animations show the aerodynamic design point; the envelope adds real control-surface
+        limits, which is what sets the payload ceiling.
+      </p>
+    </div>
+    <div class="project-media skyweaver-media">
+      <figure>
+        <video src="assets/video/mission_450_C1.mp4" autoplay muted loop playsinline controls></video>
+        <figcaption>Full mission &mdash; takeoff, 450 m transit and landing, flown by the cascaded PID controller.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/skyweaver-envelope.png" alt="Speed-versus-payload envelope plot for the PID and LQR controllers, with binding constraint labelled at each point">
+        <figcaption>Speed-versus-payload envelope with control-surface limits enforced. The ceiling at 25&ndash;30 kg is set by rudder authority, not by lift or power.</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/video/takeoff_C2.mp4" autoplay muted loop playsinline controls></video>
+        <figcaption>Takeoff under the LQR: the payload stays controlled where the PID departs the aerodynamic envelope.</figcaption>
+      </figure>
+    </div>
+    <p class="skyweaver-priorart">
+      The coordinated-tether concept itself isn't new &mdash; it appears in a 1931 patent (Beauford,
+      US 1,829,474) and was flight-demonstrated in 2023 (Sherbrooke/Georgia Tech, 20 kg payload on
+      two 3.2 kg UAVs). The contribution here is the dynamics simulation and control system built
+      around it, not the concept.
+    </p>
+  </article>
+
+  <p class="project-group-label project-group-label-spaced">Boat Projects &middot; Princeton Electric Speedboating Team</p>
   <p class="project-group-intro">
     As Engineering Team Lead (Aug 2025–present, 30-person team) and previously Subteam Leader
     (Aug 2024–Jun 2025, 5-person team), I've directed design and construction of the club's boats
