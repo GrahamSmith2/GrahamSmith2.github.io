@@ -87,25 +87,13 @@
       <h3>Skyweaver &mdash; Tethered Twin-Aircraft Heavy Lift</h3>
       <p class="project-tag">MATLAB &middot; 6-DOF Simulation &middot; Guidance &amp; Control</p>
       <p>
-        Skyweaver is a heavy-lift concept in which two tethered fixed-wing aircraft fly a
-        coordinated orbit around a shared payload, acting together as a single very large,
-        lightly-loaded rotor. It targets the payload-to-weight problem DARPA set in its 2026
-        Lift Challenge &mdash; a 4:1 goal no entrant met, the winner reaching 3.84:1 with a
-        conventional helicopter. The airframe is modelled on NASA's FASER (Free-flying
-        Aircraft for Subscale Experimental Research), a Hangar 9 Ultra Stick 120 research
-        testbed, using its real wind-tunnel-measured geometry, mass and inertia data: 1.92 m
-        span, 0.77 m&sup2; wing area, aspect ratio 4.42, 7.48 kg. I built a nonlinear
-        six-degree-of-freedom simulation of the complete system in MATLAB &mdash; two airframes and
-        a payload coupled by tension-only ropes with slack/taut switching, whole-wing
-        aerodynamics with rate damping, tether drag, ground contact, and a control-surface
-        model that checks every commanded moment against what real ailerons and rudders can
-        actually deliver. On that plant I designed and compared three controllers &mdash; a takeoff
-        scheduler, a cascaded PID autopilot, and a rotating-frame LQR &mdash; plus an outer guidance
-        loop that makes forward speed commandable and holds the vehicle on a line to under
-        half a metre. The result is a maximum-speed-versus-payload envelope showing a 25&ndash;30 kg
-        payload ceiling set by rudder authority rather than by lift or power, with the LQR
-        extending that envelope by up to 19% and flying the takeoff inside the aerodynamic
-        envelope where the PID does not.
+        Skyweaver is a heavy-lift concept in which two tethered fixed-wing aircraft orbit a
+        shared payload, acting as one large, lightly-loaded rotor &mdash; targeting the 4:1
+        payload-to-weight goal from DARPA's 2026 Lift Challenge that no entrant met. I built a
+        nonlinear 6-DOF MATLAB simulation of the full system, using NASA FASER's real
+        wind-tunnel-measured airframe data, then designed and compared a cascaded PID autopilot
+        against a rotating-frame LQR. Result: a 25&ndash;30 kg payload ceiling set by rudder
+        authority rather than lift or power, with the LQR extending that ceiling by up to 19%.
       </p>
       <p class="skyweaver-note">
         Animations show the aerodynamic design point; the envelope adds real control-surface
@@ -242,10 +230,11 @@
       <h3>Graham's Engine</h3>
       <p class="project-tag">C++ &middot; WebAssembly &middot; Chess Engine</p>
       <p>
-        A UCI-compatible chess engine written from scratch in C++: bitboard-adjacent move
-        generation, alpha-beta search with a transposition table, null-move pruning, iterative
-        deepening with a hard time budget, tapered piece-square evaluation, and a Polyglot opening
-        book. Tested at roughly 1800 Elo strength against Stockfish (skill-limited) via cutechess-cli.
+        Specified, integrated, and tested a UCI-compatible chess engine in C++: bitboard-adjacent
+        move generation, alpha-beta search with a transposition table, null-move pruning,
+        iterative deepening with a hard time budget, tapered piece-square evaluation, and a
+        Polyglot opening book. Benchmarked at roughly 1800 Elo against Stockfish (skill-limited)
+        via cutechess-cli.
       </p>
       <p>
         Compiled straight to WebAssembly, so it runs entirely in your browser — no server, nothing
