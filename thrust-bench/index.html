@@ -96,6 +96,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px 72px; }
   text-wrap: balance;
 }
 .hero p { margin: 0; max-width: 68ch; color: var(--ink-soft); font-size: 15px; }
+.src-summary { margin-top: 8px !important; font-size: 13px !important; }
 
 /* ---------- layout ---------- */
 .cols {
@@ -265,6 +266,8 @@ tbody tr:last-child td { border-bottom: 0; }
     <p>Motor and propeller pairings sized against measured wind-tunnel data.
       Every result meets your takeoff and cruise thrust at an operating point
       that was actually measured, within the motor's rated current.</p>
+    <p class="src-summary">Sourced from the <a href="#sources">UIUC Propeller Database</a> and
+      <a href="#sources">Drive Calculator</a> motor measurements &mdash; full citations below.</p>
   </section>
 
   <div class="cols">
@@ -398,7 +401,7 @@ tbody tr:last-child td { border-bottom: 0; }
         </ul>
       </div>
 
-      <footer class="credits">
+      <footer class="credits" id="sources">
         <h3>Data sources</h3>
         <p><b>Propeller coefficients.</b> J.B. Brandt, R.W. Deters, G.K. Ananda,
           O.D. Dantsker, and M.S. Selig, <i>UIUC Propeller Database</i>, Vols 1&ndash;4,
