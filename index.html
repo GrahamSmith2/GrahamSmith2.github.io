@@ -16,6 +16,7 @@
     <a href="#projects">Projects</a>
     <a href="#classes">Classes</a>
     <a href="thrust-bench/">Motor and Propeller Drone Sizing Calculator</a>
+    <a href="chess/index.html">Chess Engine</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -92,12 +93,14 @@
         payload-to-weight goal from DARPA's 2026 Lift Challenge that no entrant met. I built a
         nonlinear 6-DOF MATLAB simulation of the full system, using NASA FASER's real
         wind-tunnel-measured airframe data, then designed and compared a cascaded PID autopilot
-        against a rotating-frame LQR. Result: a 25&ndash;30 kg payload ceiling set by rudder
-        authority rather than lift or power, with the LQR extending that ceiling by up to 19%.
+        against a rotating-frame LQR. Result: sizing the tether length to each payload, rather
+        than flying a fixed rope, extends the usable envelope from a ~25&ndash;30 kg trim-limited
+        cutoff out to 45 kg, with the LQR holding control surfaces near-unsaturated across most
+        of that range while the PID saturates up to 90% at the top end.
       </p>
       <p class="skyweaver-note">
         Animations show the aerodynamic design point; the envelope adds real control-surface
-        limits, which is what sets the payload ceiling.
+        limits and a rope length sized per payload, which is what extends the usable range.
       </p>
     </div>
     <div class="project-media skyweaver-media">
@@ -106,8 +109,8 @@
         <figcaption>Full mission &mdash; takeoff, 450 m transit and landing, flown by the cascaded PID controller.</figcaption>
       </figure>
       <figure>
-        <img src="assets/img/skyweaver-envelope.png" alt="Speed-versus-payload envelope plot for the PID and LQR controllers, with binding constraint labelled at each point">
-        <figcaption>Speed-versus-payload envelope with control-surface limits enforced. The ceiling at 25&ndash;30 kg is set by rudder authority, not by lift or power.</figcaption>
+        <img src="assets/img/skyweaver-envelope.png" alt="Speed-versus-payload envelope for the PID and LQR controllers with fixed vs. sized rope length, plus control-surface authority margin and airframe-to-system speed ratio">
+        <figcaption>Fixed-rope vs. sized-rope envelope for both controllers, out to 45 kg. Sizing the tether to the payload removes the old trim cutoff near 28 kg; the LQR keeps control-surface saturation near zero across most of the range where the PID does not.</figcaption>
       </figure>
     </div>
     <p class="skyweaver-priorart">
