@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graham Smith — Mechanical &amp; Aerospace Engineering</title>
 <meta name="description" content="Portfolio of Graham Smith, mechanical & aerospace engineering student at Princeton University: VTOL flight testing, electric powertrains, CFD, and a from-scratch chess engine.">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -121,13 +121,52 @@
     </p>
   </article>
 
+  <p class="project-group-label project-group-label-spaced">Autonomy Project &middot; Princeton Electric Speedboating Team</p>
+  <article class="project">
+    <div class="project-text">
+      <h3>Osprey &mdash; Autonomous USV Rudder Sizing &amp; Control</h3>
+      <p class="project-tag">MATLAB &middot; Monte Carlo &middot; Rudder &amp; Powertrain Sizing</p>
+      <p>
+        Osprey is a 7 ft, 97 lb twin-motor electric planing catamaran racing in the Autonomy
+        division of the Promoting Electric Propulsion competition, designed and built by two
+        graduating seniors as their Princeton MAE thesis. I'm leading its revival &mdash;
+        coordinating the handover from its original builders and prioritizing the three failures
+        from its last race: a driveline that let go mid-race, an ESC/battery current mismatch, and
+        a raw-water cooling system that never flowed reliably.
+      </p>
+      <p>
+        At the 35.8 m/s (80 mph) design speed this hull runs at Froude number &asymp; 7.8 &mdash;
+        one to one-and-a-half orders of magnitude past where standard ship-hydrodynamics
+        correlations are validated, so every hull derivative in the simulation is a placeholder
+        swept &plusmn;5&times; rather than treated as known. Built a 3-DOF maneuvering simulation
+        and gain-scheduled autopilot around that uncertainty, then ran a 120-draw Monte Carlo sweep
+        across it: the rudder should be sized by span, not area &mdash; growing span buys 5.4&times;
+        the control authority of an equivalent area increase in chord &mdash; but even at 3&times;
+        the built rudder's span, the design still doesn't close the 95% cross-track robustness
+        target. Also diagnosed the powertrain as correctly sized for the 80 mph target (16 kW
+        installed vs. required, almost exactly) and traced the boat's actual underperformance to
+        propeller loading rather than available power.
+      </p>
+      <p class="skyweaver-note">
+        The attached-flow rudder model is only valid below about 20 m/s &mdash; 55% of the design
+        top speed &mdash; above which the blade drops below its cavitation ceiling, a different
+        sizing problem entirely.
+      </p>
+    </div>
+    <div class="project-media project-gallery">
+      <img class="hero" style="aspect-ratio: 1426 / 624;" src="assets/img/osprey-rudder-authority.png" alt="Rudder control authority vs deflection across speeds, and the cavitation-number ceiling vs forward speed">
+      <img class="tall" src="assets/img/osprey-rudder-photo.jpg" alt="Rudder mount and steering servo linkage installed under Osprey's carbon hull">
+      <img class="contain" style="aspect-ratio: 1445 / 631;" src="assets/img/osprey-monte-carlo.png" alt="Monte Carlo robustness CDF across 120 draws for three rudder spans, plus authority-vs-performance and sensitivity to failure">
+    </div>
+  </article>
+
   <p class="project-group-label project-group-label-spaced">Boat Projects &middot; Princeton Electric Speedboating Team</p>
   <p class="project-group-intro">
-    As Engineering Team Lead (Aug 2025–present, 30-person team) and previously Mechanical Lead
-    (Aug 2024–Jun 2025, 5-person team), I've directed design and construction of the club's boats
-    for the Promoting Electric Propulsion (PEP) Competition — 1st place Planing Design (46 MPH top
+    From August 2024 to May 2025, I led the club's manned boats — first as Mechanical Lead of a
+    5-person design team, then as Engineering Team Lead directing all 30 across both boats — for
+    the Promoting Electric Propulsion (PEP) Competition: 1st place Planing Design (46 MPH top
     speed), 3rd Over the Horizon, 4th Displacement, and 3rd in the 2025 displacement division.
-    Currently building a 48V hydroplane toward a 60 mph speed record attempt.
+    Also sized and led the 48V hydroplane's speed-record attempt.
   </p>
 
   <article class="project">
