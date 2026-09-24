@@ -248,6 +248,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }
+.skyweaver-media img.narrow { max-width: 360px; }
 .skyweaver-media figcaption {
   margin-top: 8px;
   font-size: 13px;
