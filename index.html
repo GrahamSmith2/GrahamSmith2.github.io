@@ -127,30 +127,13 @@
       <h3>Osprey &mdash; Autonomous USV Rudder Sizing &amp; Control</h3>
       <p class="project-tag">MATLAB &middot; Monte Carlo &middot; Rudder &amp; Powertrain Sizing</p>
       <p>
-        Osprey is a 7 ft, 97 lb twin-motor electric planing catamaran racing in the Autonomy
-        division of the Promoting Electric Propulsion competition, designed and built by two
-        graduating seniors as their Princeton MAE thesis. I'm leading its revival &mdash;
-        coordinating the handover from its original builders and prioritizing the three failures
-        from its last race: a driveline that let go mid-race, an ESC/battery current mismatch, and
-        a raw-water cooling system that never flowed reliably.
-      </p>
-      <p>
-        At the 35.8 m/s (80 mph) design speed this hull runs at Froude number &asymp; 7.8 &mdash;
-        one to one-and-a-half orders of magnitude past where standard ship-hydrodynamics
-        correlations are validated, so every hull derivative in the simulation is a placeholder
-        swept &plusmn;5&times; rather than treated as known. Built a 3-DOF maneuvering simulation
-        and gain-scheduled autopilot around that uncertainty, then ran a 120-draw Monte Carlo sweep
-        across it: the rudder should be sized by span, not area &mdash; growing span buys 5.4&times;
-        the control authority of an equivalent area increase in chord &mdash; but even at 3&times;
-        the built rudder's span, the design still doesn't close the 95% cross-track robustness
-        target. Also diagnosed the powertrain as correctly sized for the 80 mph target (16 kW
-        installed vs. required, almost exactly) and traced the boat's actual underperformance to
-        propeller loading rather than available power.
-      </p>
-      <p class="skyweaver-note">
-        The attached-flow rudder model is only valid below about 20 m/s &mdash; 55% of the design
-        top speed &mdash; above which the blade drops below its cavitation ceiling, a different
-        sizing problem entirely.
+        I'm leading the revival of Osprey, a 7 ft, 97 lb autonomous electric catamaran designed for
+        80 mph that races in the Autonomy division of the Promoting Electric Propulsion
+        competition. I built a 3-DOF maneuvering simulation and gain-scheduled autopilot that hold
+        up under &plusmn;5&times; uncertainty in the hull's hydrodynamics, and a 120-draw Monte Carlo
+        sweep showed the rudder should be sized by span rather than area, which buys 5.4&times; the
+        control authority. I also traced the boat's underperformance to propeller loading rather
+        than its correctly sized 16 kW powertrain.
       </p>
     </div>
     <div class="project-media skyweaver-media">
